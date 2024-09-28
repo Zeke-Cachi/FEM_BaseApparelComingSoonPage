@@ -1,0 +1,30 @@
+* {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.title-and-call-to-action-container {
+  width: 60%;
+  background: hsla(0, 93%, 68%, 0.1) url("/images/bg-pattern-desktop.svg")
+    center no-repeat;
+  background-size: cover;
+  padding: 10rem 10rem 10rem 15rem;
+}
+
+.girl-banner-desktop {
+  background-image: url("/images/hero-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 40%;
+}
