@@ -1,3 +1,12 @@
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --button-desaturated-red: hsl(0, 30%, 80%);
+  --button-soft-red: hsl(0, 80%, 68%);
+  --button-desaturated-red-active: hsl(0, 30%, 95%);
+  --button-soft-red-active: hsl(0, 80%, 85%);
+}
+
 * {
   list-style-type: none;
   margin: 0;
@@ -43,7 +52,6 @@ form {
 
 .girl-banner-mobile {
   background: url("./images/hero-mobile.jpg");
-  display: none;
 }
 
 h1,
@@ -57,7 +65,7 @@ h1 {
 }
 
 span {
-  color: hsl(0, 36%, 70%);
+  color: var(--desaturated-red);
   font-weight: 100;
 }
 
@@ -73,6 +81,7 @@ form {
   position: relative;
   width: 32rem;
   height: 4rem;
+  margin-bottom: 1.5rem;
 }
 
 input {
@@ -80,7 +89,8 @@ input {
   height: 100%;
   border-radius: 2rem;
   border: solid 1px hsla(0, 36%, 70%, 0.5);
-  color: hsla(0, 36%, 70%, 0.5);
+  color: black;
+  font-size: 1.3rem;
   padding-left: 1.5rem;
   display: grid;
   place-items: center;
@@ -93,23 +103,61 @@ input::placeholder {
 
 input:focus,
 input:active {
-  border: solid 1.5px hsl(0, 93%, 68%);
   outline: none;
 }
 
 button {
   position: absolute;
-  background: linear-gradient(90deg, hsl(0, 30%, 70%), hsl(0, 80%, 68%));
+  background: linear-gradient(
+    90deg,
+    var(--button-desaturated-red),
+    var(--button-soft-red)
+  );
   height: 4.1rem;
-  width: 7rem;
+  width: 7.5rem;
   border-radius: 2rem;
   top: 0;
   right: -2rem;
   border: none;
   cursor: pointer;
+  box-shadow: 0 5px 20px var(--desaturated-red);
+}
+
+button:active,
+button:hover {
+  background: linear-gradient(
+    90deg,
+    var(--button-desaturated-red-active),
+    var(--button-soft-red-active)
+  );
+  box-shadow: 0 10px 30px var(--desaturated-red);
+}
+
+button:focus {
+  border: red;
+  outline: red;
 }
 
 form > button > img {
   background: transparent;
   height: 45%;
+}
+
+.error-msg {
+  padding-left: 1.5rem;
+  font-weight: bolder;
+  color: var(--soft-red);
+}
+
+.error-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 6rem;
+  height: 1.8rem;
+}
+
+/* UTLITY CLASSES */
+.hide {
+  display: none;
 }
