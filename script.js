@@ -7,16 +7,18 @@ const mobileBanner = document.querySelector(".girl-banner-mobile");
 
 submitButton.addEventListener("click", (e) => {
   e.preventDefault();
-  if (input.value.length === 0) {
-    errorIcon.classList.add("hide");
-    errorMsg.classList.add("hide");
-  } else if (!input.checkValidity() && input.value.length > 0) {
+  if (!input.checkValidity()) {
     errorIcon.classList.remove("hide");
     errorMsg.classList.remove("hide");
   } else {
     errorIcon.classList.add("hide");
     errorMsg.classList.add("hide");
   }
+});
+
+input.addEventListener("blur", () => {
+  errorIcon.classList.add("hide");
+  errorMsg.classList.add("hide");
 });
 
 window.addEventListener("resize", () => {

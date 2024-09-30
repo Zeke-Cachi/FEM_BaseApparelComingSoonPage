@@ -194,7 +194,7 @@ form > button > img {
   }
 
   .girl-banner-desktop {
-    width: 50%;
+    width: 60%;
   }
 
   form {
@@ -243,5 +243,22 @@ form > button > img {
     transform: translateY(-50%);
     right: 6rem;
     height: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .title-and-call-to-action-container {
+    width: 100;
+    padding-top: 3rem;
+    padding-inline: 0.5rem;
+  }
+
+  .girl-banner-mobile {
+    width: 100vw;
   }
 }
