@@ -27,7 +27,8 @@ section > div > img {
 }
 
 .title-and-call-to-action-container {
-  width: 35%;
+  /* width: 35%; */
+  flex: 0 0 60%;
   background: hsla(0, 53%, 68%, 0.1) url("./images/bg-pattern-desktop.svg") top
     no-repeat;
   background-size: cover;
@@ -49,6 +50,7 @@ form {
   background-size: cover;
   height: 100%;
   width: 100%;
+  flex: 0 0 40%;
 }
 
 .girl-banner-mobile {
