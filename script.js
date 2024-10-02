@@ -4,6 +4,7 @@ const submitButton = document.querySelector("button");
 const input = document.querySelector("input");
 const desktopBanner = document.querySelector(".girl-banner-desktop");
 const mobileBanner = document.querySelector(".girl-banner-mobile");
+const lineBreak = document.getElementById("breakLine");
 
 submitButton.addEventListener("click", (e) => {
   e.preventDefault();
@@ -21,12 +22,16 @@ input.addEventListener("blur", () => {
   errorMsg.classList.add("hide");
 });
 
-window.addEventListener("resize", () => {
-  if (window.innerWidth <= 768) {
-    desktopBanner.classList.add("hide");
-    mobileBanner.classList.remove("hide");
-  } else {
-    desktopBanner.classList.remove("hide");
-    mobileBanner.classList.add("hide");
-  }
+const bannerEvents = ["load", "resize"];
+bannerEvents.forEach((evt) => {
+  window.addEventListener(evt, () => {
+    if (window.innerWidth <= 768) {
+      desktopBanner.classList.add("hide");
+      mobileBanner.classList.remove("hide");
+      lineBreak.remove();
+    } else {
+      desktopBanner.classList.remove("hide");
+      mobileBanner.classList.add("hide");
+    }
+  });
 });
