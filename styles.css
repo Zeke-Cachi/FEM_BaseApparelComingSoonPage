@@ -28,7 +28,7 @@ section > div > img {
 
 .title-and-call-to-action-container {
   width: 35%;
-  background: hsla(0, 53%, 68%, 0.1) url("/images/bg-pattern-desktop.svg") top
+  background: hsla(0, 53%, 68%, 0.1) url("./images/bg-pattern-desktop.svg") top
     no-repeat;
   background-size: cover;
   padding-top: 5rem;
